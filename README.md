@@ -43,5 +43,3 @@ This repository is intended to:
 Feel free to explore the content and use it as a reference during the sessions.
 
 For any questions or issues, please contact the workshop organizers.
-
----
