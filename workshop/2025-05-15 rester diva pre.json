@@ -1,0 +1,327 @@
+{
+    "info": {
+        "name": "RESTer",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "divaforum",
+            "item": [
+                {
+                    "name": "DiVA pre",
+                    "item": [
+                        {
+                            "request": {
+                                "url": "https://pre.diva-portal.org/rest/record/diva-output",
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Accept",
+                                        "value": "application/vnd.cora.record+json"
+                                    },
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/vnd.cora.recordgroup+json"
+                                    },
+                                    {
+                                        "key": "authtoken",
+                                        "value": "{authToken}"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"children\": [\n        {\n            \"children\": [\n                {\n                    \"children\": [\n                        {\n                            \"name\": \"linkedRecordType\",\n                            \"value\": \"validationType\"\n                        },\n                        {\n                            \"name\": \"linkedRecordId\",\n                            \"value\": \"diva_degree-project\"\n                        }\n                    ],\n                    \"name\": \"validationType\"\n                },\n                {\n                    \"children\": [\n                        {\n                            \"name\": \"linkedRecordType\",\n                            \"value\": \"system\"\n                        },\n                        {\n                            \"name\": \"linkedRecordId\",\n                            \"value\": \"divaData\"\n                        }\n                    ],\n                    \"name\": \"dataDivider\"\n                },\n                {\n                    \"children\": [\n                        {\n                            \"name\": \"linkedRecordType\",\n                            \"value\": \"permissionUnit\"\n                        },\n                        {\n                            \"name\": \"linkedRecordId\",\n                            \"value\": \"uu\"\n                        }\n                    ],\n                    \"name\": \"permissionUnit\"\n                },\n                {\n                    \"name\": \"visibility\",\n                    \"value\": \"published\"\n                }\n            ],\n            \"name\": \"recordInfo\"\n        },\n        {\n            \"name\": \"genre\",\n            \"attributes\": {\n                \"type\": \"outputType\"\n            },\n            \"value\": \"diva_degree-project\"\n        },\n        {\n            \"repeatId\": \"0\",\n            \"children\": [\n                {\n                    \"name\": \"languageTerm\",\n                    \"attributes\": {\n                        \"authority\": \"iso639-2b\",\n                        \"type\": \"code\"\n                    },\n                    \"value\": \"swe\"\n                }\n            ],\n            \"name\": \"language\"\n        },\n        {\n            \"children\": [\n                {\n                    \"name\": \"title\",\n                    \"value\": \"En exempel uppsats (från JSON)\"\n                }\n            ],\n            \"name\": \"titleInfo\",\n            \"attributes\": {\n                \"lang\": \"swe\"\n            }\n        },\n        {\n            \"repeatId\": \"1\",\n            \"children\": [\n                {\n                    \"name\": \"degreeLevel\",\n                    \"value\": \"L1\"\n                },\n                {\n                    \"name\": \"universityPoints\",\n                    \"value\": \"5\"\n                }\n            ],\n            \"name\": \"studentDegree\"\n        },\n        {\n            \"children\": [\n                {\n                    \"children\": [\n                        {\n                            \"name\": \"year\",\n                            \"value\": \"2025\"\n                        },\n                        {\n                            \"name\": \"month\",\n                            \"value\": \"05\"\n                        },\n                        {\n                            \"name\": \"day\",\n                            \"value\": \"14\"\n                        }\n                    ],\n                    \"name\": \"dateIssued\"\n                }\n            ],\n            \"name\": \"originInfo\"\n        },\n        {\n            \"children\": [\n                {\n                    \"name\": \"reviewed\",\n                    \"value\": \"false\"\n                }\n            ],\n            \"name\": \"admin\"\n        }\n    ],\n    \"name\": \"output\"\n}"
+                                }
+                            },
+                            "id": "rester-1",
+                            "name": "create output degreeProject json"
+                        },
+                        {
+                            "request": {
+                                "url": "https://pre.diva-portal.org/rest/record/diva-output",
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Accept",
+                                        "value": "application/vnd.cora.record+xml"
+                                    },
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/vnd.cora.recordgroup+xml"
+                                    },
+                                    {
+                                        "key": "authtoken",
+                                        "value": "{authToken}"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<output>\n    <recordInfo>\n        <validationType>\n            <linkedRecordType>validationType</linkedRecordType>\n            <linkedRecordId>diva_degree-project</linkedRecordId>\n        </validationType>\n        <dataDivider>\n            <linkedRecordType>system</linkedRecordType>\n            <linkedRecordId>divaData</linkedRecordId>\n        </dataDivider>\n        <permissionUnit>\n            <linkedRecordType>permissionUnit</linkedRecordType>\n            <linkedRecordId>uu</linkedRecordId>\n        </permissionUnit>\n        <visibility>published</visibility>\n    </recordInfo>\n    <genre type=\"outputType\">diva_degree-project</genre>\n    <language repeatId=\"0\">\n        <languageTerm authority=\"iso639-2b\" type=\"code\">swe</languageTerm>\n    </language>\n    <titleInfo lang=\"swe\">\n        <title>En exempel uppsats (från XML)</title>\n    </titleInfo>\n    <studentDegree repeatId=\"1\">\n        <degreeLevel>L1</degreeLevel>\n        <universityPoints>5</universityPoints>\n    </studentDegree>\n    <originInfo>\n        <dateIssued>\n            <year>2025</year>\n            <month>05</month>\n            <day>14</day>\n        </dateIssued>\n    </originInfo>\n    <admin>\n        <reviewed>false</reviewed>\n    </admin>\n</output>"
+                                }
+                            },
+                            "id": "rester-2",
+                            "name": "create output degreeProject xml"
+                        },
+                        {
+                            "request": {
+                                "url": "https://pre.diva-portal.org/rest/record/diva-output/{recordId}",
+                                "method": "DELETE",
+                                "header": [
+                                    {
+                                        "key": "Accept",
+                                        "value": "application/vnd.cora.record+xml"
+                                    },
+                                    {
+                                        "key": "authtoken",
+                                        "value": "{authToken}"
+                                    }
+                                ]
+                            },
+                            "id": "rester-3",
+                            "name": "delete record xml"
+                        },
+                        {
+                            "request": {
+                                "url": "https://pre.diva-portal.org/login/rest/authToken/{tokenId}",
+                                "method": "DELETE",
+                                "header": [
+                                    {
+                                        "key": "authToken",
+                                        "value": "{authToken}"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "divaAdmin@cora.epc.ub.uu.se\n49ce00fb-68b5-4089-a5f7-1c225d3cf156"
+                                }
+                            },
+                            "id": "rester-136",
+                            "name": "login delete divaAdmin apptoken"
+                        },
+                        {
+                            "request": {
+                                "url": "https://pre.diva-portal.org/login/rest/apptoken",
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/vnd.cora.login"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application/vnd.cora.authentication+json"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "divaAdmin@cora.epc.ub.uu.se\n49ce00fb-68b5-4089-a5f7-1c225d3cf156"
+                                }
+                            },
+                            "id": "rester-4",
+                            "name": "login divaAdmin apptoken"
+                        },
+                        {
+                            "request": {
+                                "url": "https://pre.diva-portal.org/login/rest/authToken/{tokenId}",
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Accept",
+                                        "value": "application/vnd.cora.authentication+json"
+                                    },
+                                    {
+                                        "key": "authToken",
+                                        "value": "{authToken}"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "divaAdmin@cora.epc.ub.uu.se\n49ce00fb-68b5-4089-a5f7-1c225d3cf156"
+                                }
+                            },
+                            "id": "rester-135",
+                            "name": "login renew divaAdmin apptoken"
+                        },
+                        {
+                            "request": {
+                                "url": "https://pre.diva-portal.org/rest/record/binary/binary:15459311940110593/master",
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Accept",
+                                        "value": "application/pdf"
+                                    },
+                                    {
+                                        "key": "authtoken",
+                                        "value": "{authToken}"
+                                    }
+                                ]
+                            },
+                            "id": "rester-5",
+                            "name": "read binary master data"
+                        },
+                        {
+                            "request": {
+                                "url": "https://pre.diva-portal.org/rest/record/binary/{recordId}",
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Accept",
+                                        "value": "application/vnd.cora.record+xml"
+                                    },
+                                    {
+                                        "key": "authtoken",
+                                        "value": "{authToken}"
+                                    }
+                                ]
+                            },
+                            "id": "rester-6",
+                            "name": "read binary record xml"
+                        },
+                        {
+                            "request": {
+                                "url": "https://pre.diva-portal.org/rest/record/diva-output/{recordId}",
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Accept",
+                                        "value": "application/vnd.cora.record+json"
+                                    }
+                                ]
+                            },
+                            "id": "rester-7",
+                            "name": "read record json"
+                        },
+                        {
+                            "request": {
+                                "url": "https://pre.diva-portal.org/rest/record/recordType",
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Accept",
+                                        "value": "application/vnd.cora.recordlist+xml"
+                                    }
+                                ]
+                            },
+                            "id": "rester-8",
+                            "name": "read record list xml"
+                        },
+                        {
+                            "request": {
+                                "url": "https://pre.diva-portal.org/rest/record/diva-output/{recordId}",
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Accept",
+                                        "value": "application/vnd.cora.record+xml"
+                                    },
+                                    {
+                                        "key": "authtoken",
+                                        "value": "{authToken}"
+                                    }
+                                ]
+                            },
+                            "id": "rester-9",
+                            "name": "read record xml"
+                        },
+                        {
+                            "request": {
+                                "url": "https://pre.diva-portal.org/rest/record/diva-output/{recordId}",
+                                "method": "GET",
+                                "header": []
+                            },
+                            "id": "rester-10",
+                            "name": "read record xml (default)"
+                        },
+                        {
+                            "request": {
+                                "url": "https://pre.diva-portal.org/rest/record/diva-output/{recordId}",
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Accept",
+                                        "value": "application/vnd.cora.record-decorated+xml"
+                                    }
+                                ]
+                            },
+                            "id": "rester-11",
+                            "name": "read record xml decorated"
+                        },
+                        {
+                            "request": {
+                                "url": "https://pre.diva-portal.org/rest/record/recordType/diva-output",
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Accept",
+                                        "value": "application/vnd.cora.record+xml"
+                                    },
+                                    {
+                                        "key": "authtoken",
+                                        "value": "{authToken}"
+                                    }
+                                ]
+                            },
+                            "id": "rester-12",
+                            "name": "read recordType diva-output xml"
+                        },
+                        {
+                            "request": {
+                                "url": "https://pre.diva-portal.org/rest/record/searchResult/validationTypeSearch?searchData=%7B%22name%22%3A%22validationTypeSearch%22%2C%22children%22%3A%5B%7B%22name%22%3A%22include%22%2C%22children%22%3A%5B%7B%22name%22%3A%22includePart%22%2C%22children%22%3A%5B%7B%22name%22%3A%22validatesRecordTypeSearchTerm%22%2C%22value%22%3A%22recordType_diva-output%22%7D%5D%7D%5D%7D%5D%7D",
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Accept",
+                                        "value": "application/vnd.cora.recordlist+json"
+                                    }
+                                ]
+                            },
+                            "id": "rester-13",
+                            "name": "search json"
+                        },
+                        {
+                            "request": {
+                                "url": "https://pre.diva-portal.org/rest/record/searchResult/validationTypeSearch?searchData=<?xml version=\"1.0\" encoding=\"UTF-8\"?><validationTypeSearch><include><includePart><validatesRecordTypeSearchTerm>recordType_diva-output</validatesRecordTypeSearchTerm></includePart></include></validationTypeSearch>",
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Accept",
+                                        "value": "application/vnd.cora.recordlist+xml"
+                                    }
+                                ]
+                            },
+                            "id": "rester-14",
+                            "name": "search xml"
+                        },
+                        {
+                            "request": {
+                                "url": "https://pre.diva-portal.org/rest/record/diva-output/{recordId}",
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Accept",
+                                        "value": "application/vnd.cora.record+xml"
+                                    },
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/vnd.cora.recordgroup+xml"
+                                    },
+                                    {
+                                        "key": "authtoken",
+                                        "value": "{authToken}"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<output>\n    <recordInfo>\n        <validationType>\n            <linkedRecordType>validationType</linkedRecordType>\n            <linkedRecordId>diva_degree-project</linkedRecordId>\n        </validationType>\n        <dataDivider>\n            <linkedRecordType>system</linkedRecordType>\n            <linkedRecordId>divaData</linkedRecordId>\n        </dataDivider>\n        <permissionUnit>\n            <linkedRecordType>permissionUnit</linkedRecordType>\n            <linkedRecordId>uu</linkedRecordId>\n        </permissionUnit>\n        <visibility>published</visibility>\n        <tsVisibility>2025-05-13T14:15:07.324693Z</tsVisibility>\n        <id>diva-output:22223850943358083</id>\n        <type>\n            <linkedRecordType>recordType</linkedRecordType>\n            <linkedRecordId>diva-output</linkedRecordId>\n        </type>\n        <createdBy>\n            <linkedRecordType>user</linkedRecordType>\n            <linkedRecordId>161616</linkedRecordId>\n        </createdBy>\n        <tsCreated>2025-05-13T14:15:07.330950Z</tsCreated>\n        <updated repeatId=\"0\">\n            <tsUpdated>2025-05-13T14:46:07.198170Z</tsUpdated>\n            <updatedBy>\n                <linkedRecordType>user</linkedRecordType>\n                <linkedRecordId>161616</linkedRecordId>\n            </updatedBy>\n        </updated>\n        <ignoreOverwriteProtection>true</ignoreOverwriteProtection>\n    </recordInfo>\n    <genre type=\"outputType\">diva_degree-project</genre>\n    <language repeatId=\"0\">\n        <languageTerm authority=\"iso639-2b\" type=\"code\">swe</languageTerm>\n    </language>\n    <titleInfo lang=\"swe\">\n                <title>Ett exempel för DiVA forum 2025</title>\n                <subTitle>Exempelposter är bäst</subTitle>\n            </titleInfo>\n    <studentDegree repeatId=\"1\">\n        <degreeLevel>L1</degreeLevel>\n        <universityPoints>5</universityPoints>\n    </studentDegree>\n    <originInfo>\n        <dateIssued>\n            <year>2025</year>\n            <month>05</month>\n            <day>14</day>\n        </dateIssued>\n    </originInfo>\n    <admin>\n        <reviewed>false</reviewed>\n    </admin>\n</output>"
+                                }
+                            },
+                            "id": "rester-15",
+                            "name": "update output record xml"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
